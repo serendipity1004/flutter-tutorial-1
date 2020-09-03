@@ -5,6 +5,18 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  Widget renderText(){
+    String name = '코딩선배';
+    int number = 0;
+    bool boolean = true;
+    bool boolean2 = false;
+
+    return Text(
+      name,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,8 +25,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: Text(
-          'JC and the startups',
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            renderText(),
+          ],
         ),
       ),
     );
