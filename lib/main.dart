@@ -5,8 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
-  Widget renderText(){
+  Widget renderText() {
     String name = '코딩선배';
     int number = 0;
     bool boolean = true;
@@ -26,9 +25,51 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            renderText(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Text(
+                  '코딩선배',
+                ),
+                Text(
+                  '에이핑크',
+                ),
+                Text(
+                  '좋아요',
+                ),
+              ],
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(
+                  color: Colors.black,
+                  width: 1.0,
+                ),
+                borderRadius: BorderRadius.circular(
+                  10.0,
+                ),
+              ),
+              child: Text(
+                '컨테이너',
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Text(
+                  '구독과',
+                ),
+                Text(
+                  '좋아요',
+                ),
+                Text(
+                  '부탁드립니다',
+                ),
+              ],
+            ),
           ],
         ),
       ),
